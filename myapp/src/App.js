@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Main from './components/Main'
 
 function App() {
+
+const [data, setData] = useState({
+    name: 'Matt',
+    location: 'Louisiana'
+  })
+
+
   return (
     <>
-    <header>
-      App Component Header
-    </header>
-    <main>
-      main
-      </main>
-      <footer>
-        footer
-      </footer>
+ <Header/>
+  <Main name={data.name} location={data.location}/>
+  <Footer/>
     </>
   );
 }
